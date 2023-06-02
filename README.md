@@ -18,14 +18,14 @@ The Baby Sleep Monitoring Tool is a project designed to help parents monitor the
 
 ## Getting Started
 To use the Baby Sleep Monitoring Tool, follow these steps:
-
+```
 Clone the repository: git clone https://github.com/rajurraju400/bsm.git
 Install the required dependencies: npm install
 Configure the tool by specifying your preferences and settings in the appropriate configuration file.
 Run the tool: npm start
 Access the web interface by opening your browser and navigating to http://localhost:3000.
 Begin monitoring your baby's sleep and health by following the on-screen instructions and utilizing the provided features.
-
+```
 ## Access BSM via Cloud:
 
 * [BSM Cloud UI](https://google.com)
