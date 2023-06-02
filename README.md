@@ -33,13 +33,13 @@ Begin monitoring your baby's sleep and health by following the on-screen instruc
 ## Contributing
 
 Contributions to the Baby Sleep Monitoring Tool are welcome! If you'd like to contribute, please follow these guidelines:
-
-> Fork the repository.
-> Create a new branch for your feature or bug fix: git checkout -b my-feature.
-> Make your modifications and commit the changes: git commit -am 'Add new feature'.
-> Push to the branch: git push origin my-feature.
-> Submit a pull request, explaining the changes and their benefits.
-
+```
+Fork the repository.
+Create a new branch for your feature or bug fix: git checkout -b my-feature.
+Make your modifications and commit the changes: git commit -am 'Add new feature'.
+Push to the branch: git push origin my-feature.
+Submit a pull request, explaining the changes and their benefits.
+```
 ## License
 > The Baby Sleep Monitoring Tool is licensed under the MIT License. You are free to use, modify, and distribute this software in accordance with the terms specified in the license.
 
