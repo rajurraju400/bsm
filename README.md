@@ -19,26 +19,29 @@ The Baby Sleep Monitoring Tool is a project designed to help parents monitor the
 ## Getting Started
 To use the Baby Sleep Monitoring Tool, follow these steps:
 
-Clone the repository: git clone https://github.com/your-username/baby-sleep-monitoring.git
+Clone the repository: git clone https://github.com/rajurraju400/bsm.git
 Install the required dependencies: npm install
 Configure the tool by specifying your preferences and settings in the appropriate configuration file.
 Run the tool: npm start
 Access the web interface by opening your browser and navigating to http://localhost:3000.
 Begin monitoring your baby's sleep and health by following the on-screen instructions and utilizing the provided features.
-Contributing
-Contributions to the Baby Sleep Monitoring Tool are welcome! If you'd like to contribute, please follow these guidelines:
 
 ## Access BSM via Cloud:
 
 * [BSM Cloud UI](https://google.com)
 
-## Fork the repository.
-Create a new branch for your feature or bug fix: git checkout -b my-feature.
-Make your modifications and commit the changes: git commit -am 'Add new feature'.
-Push to the branch: git push origin my-feature.
-Submit a pull request, explaining the changes and their benefits.
-License
-The Baby Sleep Monitoring Tool is licensed under the MIT License. You are free to use, modify, and distribute this software in accordance with the terms specified in the license.
+## Contributing
+
+Contributions to the Baby Sleep Monitoring Tool are welcome! If you'd like to contribute, please follow these guidelines:
+
+> Fork the repository.
+> Create a new branch for your feature or bug fix: git checkout -b my-feature.
+> Make your modifications and commit the changes: git commit -am 'Add new feature'.
+> Push to the branch: git push origin my-feature.
+> Submit a pull request, explaining the changes and their benefits.
+
+## License
+> The Baby Sleep Monitoring Tool is licensed under the MIT License. You are free to use, modify, and distribute this software in accordance with the terms specified in the license.
 
 ## Contact
 If you have any questions, suggestions, or feedback regarding the Baby Sleep Monitoring Tool, please don't hesitate to reach out to us. You can contact the project team here.
