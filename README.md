@@ -106,6 +106,6 @@ Submit a pull request, explaining the changes and their benefits.
 If you have any questions, suggestions, or feedback regarding the Baby Sleep Monitoring Tool, please don't hesitate to reach out to us. You can contact the project team here.
 
 aparnaraj400@gmail.com - Aparna - Developer of BSM
-Aryavenk@gmail.com - arya  - Testing team lead of BSM
+
 
 We hope that this tool helps you in ensuring your baby's sleep and health are carefully monitored, allowing for a more peaceful and confident parenting experience.
