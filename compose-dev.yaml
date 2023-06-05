@@ -1,0 +1,14 @@
+services:
+  app:
+    entrypoint:
+    - sleep
+    - infinity
+    image: rajurraju400/rockylinux:9
+    init: true
+    volumes:
+    - type: bind
+      source: /var/run/docker.sock
+      target: /var/run/docker.sock
+    ports:
+      - "5000:5000"
+
