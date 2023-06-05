@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Baby Sleep Tracker - Sleep History</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        h1{color:red;}
+    </style>
+</head>
+<body>
+    <h1>Sleep History</h1>
+
+    <canvas id="sleepChart" width="800" height="400"></canvas>
+
+    <script>
+        // Retrieve sleep entries from the server-side rendered template variable
+        var sleepEntries = {{ sleep_entries | safe }};
+    
+        if (sleepEntries.length > 0) {
+            // Extract sleep duration data from sleep entries
+            var sleepDurationData = sleepEntries.map(function(entry) {
+                var start = new Date('1970-01-01T' + entry.start_time);
+                var end = new Date('1970-01-01T' + entry.end_time);
+                var duration = (end - start) / (1000 * 60 * 60); // Calculate duration in hours
+                return duration;
+            });
+    
+            // Get the dates for labels
+            var dates = sleepEntries.map(function(entry) {
+                return entry.date;
+            });
+    
+            // Create the chart using Chart.js
+            var ctx = document.getElementById('sleepChart').getContext('2d');
+            var sleepChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: dates,
+                    datasets: [{
+                        label: 'Sleep Duration (hours)',
+                        data: sleepDurationData,
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        } else {
+            // Display a message when there are no sleep entries
+            var sleepChartContainer = document.getElementById('sleepChart');
+            sleepChartContainer.innerHTML = 'No sleep entries found.';
+        }
+    </script>
+    
+</body>
+</html>

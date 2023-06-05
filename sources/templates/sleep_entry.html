@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Baby Sleep Tracker - Sleep Entry</title>
+    <style>
+        
+        h1 {
+                color: #333;
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+        
+        form {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+        
+        label {
+                display: block;
+                margin-bottom: 5px;
+                font-weight: bold;
+            }
+        
+        input[type="date"],
+        input[type="time"],
+        textarea {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                font-size: 14px;
+                margin-bottom: 15px;
+            }
+        
+        .error-message {
+                color: red;
+                margin-top: 5px;
+            }
+        
+        .submit-button {
+                background-color: #4CAF50;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 16px;
+            }
+        
+        .submit-button:hover {
+                background-color: #45a049;
+            }
+        
+        
+    </style>
+</head>
+<body>
+    <h1>Sleep Entry</h1>
+
+    <form method="POST" action="{{ url_for('sleep_entry') }}">
+        <!-- Date Field -->
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required><br>
+        <!-- Add error message for invalid date -->
+        {% if errors and errors.date %}
+            <p class="error-message">{{ errors.date }}</p>
+        {% endif %}<br>
+
+        <!-- Start Time Field -->
+        <label for="start_time">Start Time:</label>
+        <input type="time" id="start_time" name="start_time" required><br>
+        <!-- Add error message for invalid start time -->
+        {% if errors and errors.start_time %}
+            <p class="error-message">{{ errors.start_time }}</p>
+        {% endif %}<br>
+
+        <!-- End Time Field -->
+        <label for="end_time">End Time:</label>
+        <input type="time" id="end_time" name="end_time" required><br>
+        <!-- Add error message for invalid end time -->
+        {% if errors and errors.end_time %}
+            <p class="error-message">{{ errors.end_time }}</p>
+        {% endif %}<br>
+
+        <!-- Notes Field -->
+        <label for="notes">Notes:</label>
+        <textarea id="notes" name="notes"></textarea><br>
+
+        <!-- Add error message for notes length limit -->
+        {% if errors and errors.notes %}
+            <p class="error-message">{{ errors.notes }}</p>
+        {% endif %}<br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
