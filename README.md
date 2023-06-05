@@ -28,7 +28,7 @@ Begin monitoring your baby's sleep and health by following the on-screen instruc
 ```
 ## Access BSM via Cloud:
 
-* [BSM Cloud UI](https://google.com)
+* [BSM Cloud UI](http://70.119.111.12:5000/)
 
 ## Contributing
 
