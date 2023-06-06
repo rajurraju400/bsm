@@ -1,38 +1,95 @@
+<!-- home.html -->
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Baby Sleep Tracker</title>
+    <title>Home</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f2f2f2;
-            margin: 0;
-            padding: 0;
+            background-image: url("{{ url_for('static', filename='bsm.png') }}");
+            background-size:cover;
+            background-position: center;
+            background-repeat:no-repeat;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+            
         }
 
         h1 {
-            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: cursive;
         }
 
-        p {
-            color: #666;
+        .content {
+            margin-bottom: 20px;
+            position: relative;
+            text-align:center;
+        }
+
+        .content p {
+            line-height: 1.5;
+            margin-bottom: 10px;
+            text-align:center;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #87CEEB;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            cursor: pointer;
+            text-align:center;
+            position: relative;
+            font-family: cursive;
+        }
+
+        .button:hover {
+            background-color: #72A0C1;
+            text-align:center;
+            position: relative;
+            font-family: cursive;
+        }
+        .button-container {
+            color: #fff;
+            background-color: #87CEEB;
+            text-align:center;
+            font-family: cursive;
+        }
+        .image-style {
+            border-radius:8px;
+            width:100%;
+            height:auto;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to the Baby Sleep Tracker!</h1>
-        <p>Track and monitor your baby's sleep patterns.<br><br><br>
-            <a href="{{ url_for('sleep_entry') }}" style="background-color: navy; color: white; padding: 7px 10px; "><center>Enter Arya's sleep data</center></a></a></p>
+        <h1>Welcome to the Baby Sleep Tracker</h1>
+        
+        <div class="content">
+            <p>The Baby Sleep Monitoring Tool is a project designed to help parents monitor the sleep patterns and overall health of their baby. This tool provides a convenient and reliable solution for tracking various sleep-related parameters, allowing parents to gain valuable insights and ensure the well-being of their little ones.</p><br><br><br>
+            <img src="{{ url_for('static', filename='baby.png') }}" alt="baby img" class="image-style">
+            
+
+        <div class="button-container">
+            <a href="{{ url_for('sleep_entry') }}" class="button">Add Sleep Entry</a>
+            <a href="{{ url_for('sleep_history') }}" class="button">View Sleep History</a>
+        </div>
     </div>
 </body>
 </html>

@@ -60,7 +60,7 @@
     <form method="POST" action="{{ url_for('sleep_entry') }}">
         <!-- Date Field -->
         <label for="date">Date:</label>
-        <input type="date" id="date" name="date" required><br>
+        <input type="date" id="date" name="date"  class="form-control" required><br>
         <!-- Add error message for invalid date -->
         {% if errors and errors.date %}
             <p class="error-message">{{ errors.date }}</p>
@@ -68,7 +68,7 @@
 
         <!-- Start Time Field -->
         <label for="start_time">Start Time:</label>
-        <input type="time" id="start_time" name="start_time" required><br>
+        <input type="time" id="start_time" name="start_time" class="form-control" required><br>
         <!-- Add error message for invalid start time -->
         {% if errors and errors.start_time %}
             <p class="error-message">{{ errors.start_time }}</p>
@@ -76,7 +76,7 @@
 
         <!-- End Time Field -->
         <label for="end_time">End Time:</label>
-        <input type="time" id="end_time" name="end_time" required><br>
+        <input type="time" id="end_time" name="end_time" class="form-control" required><br>
         <!-- Add error message for invalid end time -->
         {% if errors and errors.end_time %}
             <p class="error-message">{{ errors.end_time }}</p>
@@ -84,7 +84,7 @@
 
         <!-- Notes Field -->
         <label for="notes">Notes:</label>
-        <textarea id="notes" name="notes"></textarea><br>
+        <textarea id="notes" name="notes" class="form-control"></textarea><br>
 
         <!-- Add error message for notes length limit -->
         {% if errors and errors.notes %}
@@ -92,7 +92,7 @@
         {% endif %}<br>
 
         <!-- Submit Button -->
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit" class="submit-button">
     </form>
 </body>
 </html>
